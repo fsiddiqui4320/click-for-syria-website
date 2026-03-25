@@ -1,0 +1,12 @@
+{
+  "name": "click-for-syria-website",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4"
+  },
+  "devDependencies": {
+    "@vercel/node": "^5.1.13",
+    "typescript": "^5.8.3"
+  }
+}
