@@ -74,8 +74,13 @@ function showFallback(id) {
 }
 
 async function loadStats() {
-  // Don't attempt fetch if Supabase isn't configured yet
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
+  // Supabase not configured yet — show mock stats for beta
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+    renderStat('stat-emails', 163);
+    renderStat('stat-posts', 91);
+    renderStat('stat-users', 34);
+    return;
+  }
 
   const timeout = new Promise((_, reject) =>
     setTimeout(() => reject(new Error('timeout')), TIMEOUT_MS)
