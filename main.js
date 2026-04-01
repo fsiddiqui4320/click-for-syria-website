@@ -78,7 +78,7 @@ async function loadStats() {
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
     renderStat('stat-emails', 163);
     renderStat('stat-posts', 91);
-    renderStat('stat-users', 34);
+    renderStat('stat-users', 46);
     return;
   }
 
